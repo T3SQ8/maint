@@ -1,5 +1,5 @@
-from helper import convert_size, used_storage
-from steps import steps
+from .helper import convert_size, used_storage
+from .steps import steps
 
 if __name__ == "__main__":
 

@@ -1,6 +1,6 @@
 from os.path import expanduser
 
-from prompts import Command, Task
+from .prompts import Command, Task
 
 docker = [
     Command(
