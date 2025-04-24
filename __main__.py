@@ -12,10 +12,13 @@ if __name__ == "__main__":
         current_step += 1
     hdd_after = used_storage()
 
-    b = convert_size(hdd_before)
-    a = convert_size(hdd_after)
-    d = convert_size(hdd_before - hdd_after)
+    size_before = convert_size(hdd_before)
+    size_after = convert_size(hdd_after)
+    if hdd_after < hdd_before:
+        size_diff = convert_size(hdd_before - hdd_after)
+    else:
+        size_diff = "-" + convert_size(abs(hdd_before - hdd_after))
 
-    MESSAGE = f"{b} -> {a} ({d})"
+    MESSAGE = f"{size_before} -> {size_after} ({size_diff})"
     print("\n" * 3, "-" * len(MESSAGE))
     print(MESSAGE)
