@@ -4,8 +4,12 @@ from .steps import steps
 if __name__ == "__main__":
 
     hdd_before = used_storage()
+    total_steps = len(steps)
+    current_step = 1
     for s in steps:
+        print(f"[{current_step}/{total_steps}]", end=" ")
         s.prompt()
+        current_step += 1
     hdd_after = used_storage()
 
     b = convert_size(hdd_before)
