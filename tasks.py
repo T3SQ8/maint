@@ -1,8 +1,6 @@
 import subprocess
 from shutil import which
-
 from colorama import Fore
-
 
 class Command:
     def __init__(
